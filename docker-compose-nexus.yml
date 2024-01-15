@@ -51,8 +51,8 @@ services:
   frontend:
     image: 161.35.24.93:8082/repository/buy02-docker-images/frontend:${PROJECT_VERSION}
     ports:
-      - "80:80"
-      - "443:443"
+      - "8000:80"
+      - "8443:443"
     volumes:
       - ${CERT_PATH}:/etc/nginx/ssl:ro
     environment:

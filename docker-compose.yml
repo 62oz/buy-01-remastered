@@ -81,8 +81,8 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "80:80"
-      - "443:443"
+      - "8000:80"
+      - "8443:443"
     volumes:
       - ${CERT_PATH}:/etc/nginx/ssl:ro
     environment:
