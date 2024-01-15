@@ -20,8 +20,8 @@ services:
         BUILD_PROFILE: ${BUILD_PROFILE}
     restart: always
     environment:
-      SPRING_DATA_MONGODB_URI: mongodb+srv://${DB_USER}:${DB_PASS}@buy-01.ozmlpob.mongodb.net/?authSource=admin
-      SPRING_DATA_MONGODB_DB: buy-01-users
+      SPRING_DATA_MONGODB_URI: mongodb+srv://62oz:T34mP4ssw0rd@buy-01.zehvood.mongodb.net/db-user
+      SPRING_DATA_MONGODB_DB: db-user
       JWT_SECRET: ${JWT_SECRET}
     ports:
       - "8080:8080"
@@ -36,8 +36,8 @@ services:
       dockerfile: product-service/Dockerfile
     restart: always
     environment:
-      SPRING_DATA_MONGODB_URI: mongodb+srv://${DB_USER}:${DB_PASS}@buy-01.ozmlpob.mongodb.net/?authSource=admin
-      SPRING_DATA_MONGODB_DB: buy-01-products
+      SPRING_DATA_MONGODB_URI: mongodb+srv://62oz:T34mP4ssw0rd@buy-01.zehvood.mongodb.net/db-product
+      SPRING_DATA_MONGODB_DB: db-product
     ports:
       - "8081:8080"
     depends_on:
@@ -51,8 +51,8 @@ services:
       dockerfile: media-service/Dockerfile
     restart: always
     environment:
-      SPRING_DATA_MONGODB_URI: mongodb+srv://${DB_USER}:${DB_PASS}@buy-01.ozmlpob.mongodb.net/?authSource=admin
-      SPRING_DATA_MONGODB_DB: buy-01-media
+      SPRING_DATA_MONGODB_URI: mongodb+srv://62oz:T34mP4ssw0rd@buy-01.zehvood.mongodb.net/db-media
+      SPRING_DATA_MONGODB_DB: db-media
     ports:
       - "8082:8080"
     depends_on:
@@ -66,8 +66,8 @@ services:
       dockerfile: order-service/Dockerfile
     restart: always
     environment:
-      SPRING_DATA_MONGODB_URI: mongodb+srv://${DB_USER}:${DB_PASS}@buy-01.ozmlpob.mongodb.net/?authSource=admin
-      SPRING_DATA_MONGODB_DB: buy-01-orders
+      SPRING_DATA_MONGODB_URI: mongodb+srv://62oz:T34mP4ssw0rd@buy-01.zehvood.mongodb.net/db-order
+      SPRING_DATA_MONGODB_DB: db-order
     ports:
       - "8083:8080"
     depends_on:
